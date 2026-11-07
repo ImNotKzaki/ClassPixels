@@ -1,0 +1,140 @@
+
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+
+  <title>PixelClasse</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <span class="logo-icon">▦</span>
+      PixelClasse
+    </div>
+    <span class="online">
+      <span class="online-dot"></span>
+      ONLINE
+    </span>
+  </header>
+
+  <main>
+    <section class="intro">
+      <p class="eyebrow">UN PROGETTO COLLABORATIVO</p>
+      <h1>La nostra tela.</h1>
+      <p class="subtitle">
+        Un pixel al giorno, un colore alla volta.
+        Cosa riusciremo a creare insieme?
+      </p>
+    </section>
+
+    <section class="stats">
+      <div class="stat">
+        <span class="stat-number" id="coloredCount">0</span>
+        <span class="stat-label">PIXEL COLORATI</span>
+      </div>
+      <div class="stat">
+        <span class="stat-number" id="remainingCount">2500</span>
+        <span class="stat-label">PIXEL DISPONIBILI</span>
+      </div>
+    </section>
+
+    <section class="canvas-card">
+      <div class="section-heading">
+        <div>
+          <h2>La tela della classe</h2>
+          <p>Seleziona un pixel bianco per colorarlo.</p>
+        </div>
+        <span class="grid-label">50 × 50</span>
+      </div>
+
+      <div class="grid-wrapper">
+        <div id="pixelGrid" class="pixel-grid"></div>
+      </div>
+
+      <div class="grid-footer">
+        <span><span class="legend white"></span> Libero</span>
+        <span><span class="legend filled"></span> Colorato</span>
+      </div>
+    </section>
+
+    <section class="picker-card">
+      <div class="section-heading">
+        <div>
+          <h2>Scegli il tuo colore</h2>
+          <p>Puoi scegliere qualsiasi sfumatura.</p>
+        </div>
+      </div>
+
+      <div class="color-controls">
+        <label class="color-preview" for="colorPicker">
+          <input
+            type="color"
+            id="colorPicker"
+            value="#3980F6"
+            aria-label="Apri selettore colori">
+        </label>
+
+        <div class="color-fields">
+          <label>
+            HEX
+            <input id="hexInput"
+                   type="text"
+                   value="#3980F6"
+                   maxlength="7">
+          </label>
+
+          <label>
+            R
+            <input id="redInput" type="number"
+                   min="0" max="255" value="57">
+          </label>
+
+          <label>
+            G
+            <input id="greenInput" type="number"
+                   min="0" max="255" value="128">
+          </label>
+
+          <label>
+            B
+            <input id="blueInput" type="number"
+                   min="0" max="255" value="246">
+          </label>
+        </div>
+      </div>
+
+      <div class="selected-info">
+        <span class="selected-dot" id="selectedDot"></span>
+        <span id="selectedHex">#3980F6</span>
+      </div>
+
+      <div class="selection-info" id="selectionInfo">
+        Nessun pixel selezionato.
+      </div>
+
+      <button id="paintButton" disabled>
+        Seleziona un pixel
+      </button>
+
+      <p class="daily-note" id="dailyNote">
+        Puoi colorare un pixel al giorno.
+      </p>
+
+      <div id="message" class="message"></div>
+    </section>
+
+    <footer>
+      Realizzato per la nostra classe ❤️
+    </footer>
+  </main>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
